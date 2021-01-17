@@ -1,0 +1,14 @@
+{
+	"name":"Cambiar color de la pagina con menu popup",
+	"description":"Cambiar la pagina actual",
+	"version":"1.0",
+	"permissions":[
+		"activeTab"
+	],
+	"browser_action":{
+		"default_title":"set this page color.",
+		"default_icon":"icon.png",
+		"default_popup":"popup.html"
+	},
+	"manifest_version":2
+}

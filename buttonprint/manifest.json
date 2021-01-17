@@ -1,0 +1,17 @@
+{
+	"name":"Print this page",
+	"description":"agrega boton impresion",
+	"version":"1.2",
+	"background":{
+		"scripts":["background.js"],
+		"persistent":false
+	},
+	"permissions":[
+		"activeTab"
+	],
+	"browser_action":{
+		"default_title":"Imprimir esta página",
+		"default_icon":"print_16x16.png"
+	},
+	"manifest_version":2
+}

@@ -1,0 +1,16 @@
+  {
+    "name": "Cambiar a rojo",
+    "description":"insertar o cambiar DOM actionSctipt cambiando el color de la pagina.",
+    "version":"1.0",
+    "manifest_version":2,
+    "permissions": [
+      "activeTab"
+    ],
+    "background":{
+      "scripts":["background.js"],
+      "persistent":false
+    },
+    "browser_action":{
+      "default_title":"Make this page red"
+    }
+  }
