@@ -57,18 +57,28 @@ function getParticipants(){
 					loid.push(pid)
 				}
 			}
-			if(lou.length>tmparr.length){
+			/**if(lou.length>tmparr.length){
 			console.log("Guardando arreglo "+lou.length);
 			console.log("ultimo elemento de array "+lou[lou.length-1]);
+			}**/
 				tmparr=lou;
-				chrome.storage.sync.set({'participants':lou},function(){console.log("participantes guardados")})
-			}
-			chrome.storage.sync.get(['participants'],function(r){
-				console.log('el resulado obtenido del storage es: '+r.participants)
-			})
-			//console.log(xxx);
-
-			//
+				chrome.storage.sync.get(['participants'],function(r){
+			        console.log(r)
+			        //if((r.participants=== 'undefined') || (lou.length>r.participants.length)){ hacer pruebas de if por partes
+			        if(r.participants!='undefined'){
+			        	console.log("no es indefinido");
+			        	if(lou.length>r.participants.length){
+			        		console.log("el tamaño de la lista es mayor que el del storage, por lo tanto, settear participants");
+						chrome.storage.sync.set({'participants':lou},function(){console.log("participantes guardados")})
+			        	}
+			        	console.log("es undefined");
+			        	//hacer set en store
+						//hacer q se coloque en html el listado de meet usando getelement o  create element o appendchild
+						//verificar si se puede llamar a una funcion, de ser asi, llamar funcion colocar tabla html que se encuentra en popup.js
+						//verificar si se puede llamar a funcion local para colocar html en popup.html usando codigo del api de chrome execute script
+						//
+			        }
+			    })
 		}
 		,6500);
 }
